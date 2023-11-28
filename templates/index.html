@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    h2 {
+      color: #666;
+    }
+
+    p {
+      color: #999;
+    }
+
+    img {
+      width: 200px;
+      border-radius: 50%;
+      margin-top: 20px;
+    }
+
+    .board {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .board-item {
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .board-item:last-child {
+      border-bottom: none;
+    }
+
+    .board-item a {
+      text-decoration: none;
+      color: #007BFF;
+      font-weight: bold;
+    }
+  </style>
+  <title>고양이홈페이지</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>My Cat Hompage</h1>
+    <h2>환영합니다</h2>
+    <p></p>
+    <img src="https://placekitten.com/200/200" alt="고양이 사진">
+    <!--img src="{{ url_for('static', filename='pubao.jpeg') }}"-->
+    <br>
+    <a href="profile">My Profile</p>
+
+    <div class="board">
+      <div class="board-item"><a href="hello">게시물 1</a></div>
+      <div class="board-item"><a href="#">게시물 2</a></div>
+      <div class="board-item"><a href="#">게시물 3</a></div>
+      <!-- 추가적인 목록 아이템을 원하는 만큼 추가할 수 있습니다. -->
+    </div>
+  </div>
+
+</body>
+</html>
