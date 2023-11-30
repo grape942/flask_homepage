@@ -23,7 +23,7 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
+    h1, h2, p {
       color: #333;
     }
 
@@ -67,19 +67,24 @@
 
   <div class="container">
     <h1>My Cat Hompage</h1>
-    <h2>환영합니다</h2>
+    <h2>환영합니다, {{ name }}</h2>
     <p></p>
     <img src="https://placekitten.com/200/200" alt="고양이 사진">
-    <!--img src="{{ url_for('static', filename='pubao.jpeg') }}"-->
     <br>
-    <a href="profile">My Profile</p>
+    <a href="profile">My Profile</a>
 
-    <div class="board">
-      <div class="board-item"><a href="hello">게시물 1</a></div>
-      <div class="board-item"><a href="#">게시물 2</a></div>
-      <div class="board-item"><a href="#">게시물 3</a></div>
-      <!-- 추가적인 목록 아이템을 원하는 만큼 추가할 수 있습니다. -->
-    </div>
+    <h1>Add Post</h1>
+    <form method="post" action="/add_post">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" rows="4" required></textarea>
+        <br>
+        <input type="submit" value="Add Post">
+    </form>
+    <br>
+    <a href="{{ url_for('view_posts') }}">Go to Posts</a>
   </div>
 
 </body>
