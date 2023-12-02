@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     user_input = request.args.get('user_input', 'Default User')
-    eval(user_input)
+    #eval(user_input)
     return render_template('index.html', user_input=user_input)
 
 if __name__ == '__main__':
